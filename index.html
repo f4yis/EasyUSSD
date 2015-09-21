@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Easy USSD</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+    <link href='font/font.css' rel='stylesheet' type='text/css'/>
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+    <script src="script/app.js" defer></script>
+  </head>
+
+  <body>
+    <div id="header">
+      Easy USSD
+    </div>
+    <div id="content">
+      <form name="form1">
+        <select id="operator">
+          <option value="0">Select an operator</option>
+          <option value="1">Vodfone</option>
+          <option value="2">Idea</option>
+          <option value="3">AirTel</option>
+          <option value="4">BSNL</option>
+          <option value="5">Uninor</option>
+          <option value="6">Tata Docomo</option>
+          <option value="7">Aircel</option>
+          <option value="8">Reliance</option>
+          <option value="9">Videocon</option>
+        </select>
+        <input type="button" value="Okay" id="btn-okay" onClick="JavaScript:setsel()"/>
+      </form>
+    <div id="ussd">
+      <a href="#" id="balance" onClick="JavaScript:chkbal(document.getElementById('operator').value)">Balance</a>
+      <a href="#" id="data" onClick="JavaScript:data(document.getElementById('operator').value)">Data Usage</a>
+      <a href="#" id="comp" onClick="JavaScript:help(document.getElementById('operator').value)">Complaint / Help no.</a>
+      <a href="#" id="dnd" onClick="JavaScript:dnd(document.getElementById('operator').value)">Do Not Distrub</a>
+      <a href="#" id="customer"onClick="JavaScript:customer(document.getElementById('operator').value)">Customer Care</a>
+    </div>
+    </div>
+  </body>
+
+</html>
